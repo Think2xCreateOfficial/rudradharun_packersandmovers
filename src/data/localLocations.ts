@@ -93,4 +93,13 @@ export const localLocations: LocationSuggestion[] = [
     lat: "8.7642",
     lon: "78.1348",
   },
+  {
+    id: "local-pattamadai",
+    displayName: "Pattamadai, Tirunelveli, Tamil Nadu, India",
+    shortName: "Pattamadai",
+    secondaryName: "Tamil Nadu",
+    type: "town",
+    lat: "8.6698",
+    lon: "77.5806",
+  },
 ];

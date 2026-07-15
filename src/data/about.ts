@@ -50,7 +50,7 @@ export const companyStory = {
   ],
   founderName: "Mr. Karthik",
   founderTitle: "Founder & Director",
-  founderImage: "/founder1.png",
+  founderImage: "/founder.png",
 };
 
 // ---- Stats ----

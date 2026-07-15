@@ -70,6 +70,8 @@ export function CompanyStorySection() {
                 <Image
                   src={companyStory.founderImage}
                   fill
+                  quality={100}
+                  priority
                   sizes="(max-width: 1024px) 100vw, 50vw"
                   className="object-contain object-top"
                   alt={`${companyStory.founderName} – ${companyStory.founderTitle}`}

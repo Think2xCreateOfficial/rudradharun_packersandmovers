@@ -169,9 +169,17 @@ export async function searchLocations(
   try {
     const results = await provider.search(query, signal);
     
-    // Combine local results and API results, removing duplicates by shortName
+    // Combine local results and API results
     const combined = [...localResults, ...results];
-    const unique = Array.from(new Map(combined.map(item => [item.shortName, item])).values());
+    
+    // Remove duplicates by shortName, keeping the first occurrence (which prioritizes localResults)
+    const uniqueMap = new Map<string, LocationSuggestion>();
+    for (const item of combined) {
+      if (!uniqueMap.has(item.shortName)) {
+        uniqueMap.set(item.shortName, item);
+      }
+    }
+    const unique = Array.from(uniqueMap.values());
     
     setCache(cacheKey, unique);
     return unique;

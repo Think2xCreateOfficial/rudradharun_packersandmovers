@@ -23,7 +23,7 @@ export const SERVICES: ServiceItem[] = [
     shortDescription: "Complete home relocation with expert packing & care.",
     icon: "Home",
     image:
-      "/packersandmovers5.png",
+      "/packersandmovers30.png",
     imageAlt: "Professional household shifting service",
     href: "/services#household-shifting",
     colorVariant: "blue",

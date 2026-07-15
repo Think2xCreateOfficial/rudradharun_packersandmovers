@@ -63,15 +63,15 @@ function LeftPanelIllustration() {
 
 // ---- Form schema ----
 const contactSchema = z.object({
-  name: z.string().min(2, "Name required"),
-  phone: z.string().min(10, "Valid phone required"),
-  pickup: z.string().min(2, "Pickup location required"),
-  drop: z.string().min(2, "Drop location required"),
-  date: z.string().regex(
+  name: z.string({ message: "Please enter your name" }).min(2, "Name is required"),
+  phone: z.string({ message: "Please enter your phone number" }).min(10, "Valid phone number required"),
+  pickup: z.string({ message: "Please enter a pickup location" }).min(2, "Pickup location is required"),
+  drop: z.string({ message: "Please enter a drop location" }).min(2, "Drop location is required"),
+  date: z.string({ message: "Please select a moving date" }).regex(
     /^(0[1-9]|[12][0-9]|3[01])\/(0[1-9]|1[0-2])\/\d{4}$/,
-    "Please enter a valid date"
+    "Please select a valid moving date"
   ),
-  serviceType: z.string().min(1, "Service type required"),
+  serviceType: z.string({ message: "Please select a service type" }).min(1, "Service type is required"),
   message: z.string().optional(),
 });
 

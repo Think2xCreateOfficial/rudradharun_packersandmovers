@@ -5,11 +5,11 @@ export const BUSINESS = {
   whatsapp: "+91 8925310877",
   email: "rudradhir1@gmail.com",
   address: {
-    full: "Coimbatore, Tamil Nadu, India",
-    street: "123 Logistics Park",
+    full: "4/20, Murugan Nagar, Kavundampalayam, Coimbatore - 30",
+    street: "4/20, Murugan Nagar, Kavundampalayam",
     city: "Coimbatore",
     state: "Tamil Nadu",
-    zip: "641001",
+    zip: "641030",
     country: "IN",
   },
   workingHours: {

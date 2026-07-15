@@ -47,13 +47,13 @@ function WhatsAppIcon({ className }: { className?: string }) {
 
 // ---- Form Schema ----
 const quoteSchema = z.object({
-  name: z.string().min(2, "Name is required"),
-  phone: z.string().min(10, "Valid phone number required"),
-  movingFrom: z.string().min(2, "Moving From is required"),
-  movingTo: z.string().min(2, "Moving To is required"),
-  movingDate: z.string().regex(
+  name: z.string({ message: "Please enter your name" }).min(2, "Name is required"),
+  phone: z.string({ message: "Please enter your phone number" }).min(10, "Valid phone number required"),
+  movingFrom: z.string({ message: "Please enter a pickup location" }).min(2, "Pickup location is required"),
+  movingTo: z.string({ message: "Please enter a drop location" }).min(2, "Drop location is required"),
+  movingDate: z.string({ message: "Please select a moving date" }).regex(
     /^(0[1-9]|[12][0-9]|3[01])\/(0[1-9]|1[0-2])\/\d{4}$/,
-    "Please enter a valid date"
+    "Please select a valid moving date"
   ),
 });
 
