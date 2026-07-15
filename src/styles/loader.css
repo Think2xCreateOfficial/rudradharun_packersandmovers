@@ -1,0 +1,94 @@
+/* =============================================================
+   LOADER STYLES — loader.css
+   GPU-accelerated, motion-safe, production-grade
+   ============================================================= */
+
+/* ---- Spinning ring (from Uiverse reference) ---- */
+.loader-spin {
+  stroke-dasharray: 170;
+  stroke-dashoffset: 0;
+  animation: loader-ring-spin 1.4s cubic-bezier(0.42, 0, 0.58, 1) infinite;
+  transform-origin: center;
+  will-change: transform, stroke-dashoffset;
+}
+
+@keyframes loader-ring-spin {
+  0% {
+    stroke-dashoffset: 170;
+    transform: rotate(-90deg);
+  }
+
+  50% {
+    stroke-dashoffset: 0;
+    transform: rotate(90deg);
+  }
+
+  100% {
+    stroke-dashoffset: 170;
+    transform: rotate(270deg);
+  }
+}
+
+/* ---- Dash draw path (Y and U shapes from reference) ---- */
+.loader-dash {
+  stroke-dasharray: 360;
+  stroke-dashoffset: 360;
+  animation: loader-dash-draw 1.4s cubic-bezier(0.42, 0, 0.58, 1) infinite alternate;
+  will-change: stroke-dashoffset;
+}
+
+@keyframes loader-dash-draw {
+  0% {
+    stroke-dashoffset: 360;
+  }
+
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+/* ---- Per-character brand text draw animation ----------------
+   Matches the exact animation logic of the reference "YOU" letters:
+   - stroke-dashoffset draws the stroke from 0 → visible
+   - fill fades in once the stroke is nearly complete
+   - Each <tspan> applies this class + its own animationDelay
+   - Duration / easing / alternate direction mirror the original
+   ------------------------------------------------------------ */
+.loader-char {
+  /* Large enough for any glyph at our font sizes */
+  stroke-dasharray: 120;
+  stroke-dashoffset: 120;
+  fill-opacity: 0;
+  /* Matches loader-dash timing: 1.4 s, same cubic-bezier, alternates */
+  animation: loader-char-draw 1.4s cubic-bezier(0.42, 0, 0.58, 1) infinite alternate;
+  will-change: stroke-dashoffset, fill-opacity;
+}
+
+@keyframes loader-char-draw {
+  0% {
+    stroke-dashoffset: 120;
+    fill-opacity: 0;
+  }
+
+  /* Fill starts appearing once most of the stroke path is drawn */
+  75% {
+    fill-opacity: 0;
+  }
+
+  100% {
+    stroke-dashoffset: 0;
+    fill-opacity: 1;
+  }
+}
+
+/* ---- Reduced motion: disable all animations ---- */
+@media (prefers-reduced-motion: reduce) {
+
+  .loader-spin,
+  .loader-dash,
+  .loader-char {
+    animation: none;
+    stroke-dashoffset: 0;
+    fill-opacity: 1;
+  }
+}

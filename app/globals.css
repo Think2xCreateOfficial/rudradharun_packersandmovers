@@ -1,0 +1,193 @@
+@import "tailwindcss";
+
+/* ============================================================
+   DESIGN TOKENS
+   ============================================================ */
+@theme {
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-serif: var(--font-outfit), ui-serif, Georgia, serif;
+
+  --color-brand-blue: #004690;
+  --color-brand-blue-light: #0066CC;
+  --color-brand-navy: #0A192F;
+  --color-gold-400: #FACC15;
+  --color-gold-500: #EAB308;
+  --color-gold-600: #CA8A04;
+}
+
+
+/* ============================================================
+   BASE STYLES
+   ============================================================ */
+@layer base {
+  body {
+    @apply bg-white text-gray-900 selection:bg-brand-blue/20;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/* ─── Custom Scrollbar ───────────────────────────────────────── */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #ffffff;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-brand-primary);
+  border-radius: 3px;
+}
+
+
+
+/* ============================================================
+   GLOBAL LOADER ANIMATIONS
+   GPU-accelerated, production-grade, motion-safe.
+   Note: Cannot use @import with path aliases in PostCSS context
+   (Tailwind v4 / Turbopack resolves CSS before Next.js aliases).
+   All loader keyframes are inlined here as the single source of truth.
+   ============================================================ */
+
+/* ---- Spinning ring ---- */
+.loader-spin {
+  stroke-dasharray: 170;
+  stroke-dashoffset: 0;
+  animation: loader-ring-spin 1.4s cubic-bezier(0.42, 0, 0.58, 1) infinite;
+  transform-origin: center;
+  will-change: transform, stroke-dashoffset;
+}
+
+@keyframes loader-ring-spin {
+  0%   { stroke-dashoffset: 170; transform: rotate(-90deg); }
+  50%  { stroke-dashoffset: 0;   transform: rotate(90deg);  }
+  100% { stroke-dashoffset: 170; transform: rotate(270deg); }
+}
+
+/* ---- Dash draw (Y and U shapes) ---- */
+.loader-dash {
+  stroke-dasharray: 360;
+  stroke-dashoffset: 360;
+  animation: loader-dash-draw 1.4s cubic-bezier(0.42, 0, 0.58, 1) infinite alternate;
+  will-change: stroke-dashoffset;
+}
+
+@keyframes loader-dash-draw {
+  0%   { stroke-dashoffset: 360; }
+  100% { stroke-dashoffset: 0;   }
+}
+
+/* ---- Per-character brand text draw animation -----------------
+   Each <tspan class="loader-char"> in LoaderBrand gets its own
+   animationDelay via inline style, replicating the stagger of
+   the original Y / O / U reference shapes.
+   Color: single brand-blue (#004690) — set on the SVG element.
+   --------------------------------------------------------------- */
+.loader-char {
+  /* Generous dasharray covers all glyph path lengths at our sizes */
+  stroke-dasharray: 120;
+  stroke-dashoffset: 120;
+  fill-opacity: 0;
+  /* Exact same duration + easing + alternate as loader-dash */
+  animation: loader-char-draw 1.4s cubic-bezier(0.42, 0, 0.58, 1) infinite alternate;
+  will-change: stroke-dashoffset, fill-opacity;
+}
+
+@keyframes loader-char-draw {
+  0%  { stroke-dashoffset: 120; fill-opacity: 0; }
+  75% { fill-opacity: 0; }
+  100%{ stroke-dashoffset: 0;   fill-opacity: 1; }
+}
+
+/* ---- Reduced motion: graceful fallback ---- */
+@media (prefers-reduced-motion: reduce) {
+  .loader-spin,
+  .loader-dash,
+  .loader-char {
+    animation: none;
+    stroke-dashoffset: 0;
+    fill-opacity: 1;
+  }
+}
+
+/* ============================================================
+   ANIMATIONS (Replacing framer-motion)
+   ============================================================ */
+@layer utilities {
+  .animate-fade-in {
+    opacity: 0;
+    animation: fadeIn 0.5s ease-out forwards;
+  }
+  .animate-fade-in-up {
+    opacity: 0;
+    transform: translateY(24px);
+    animation: fadeInUp 0.5s ease-out forwards;
+  }
+  .animate-fade-in-down {
+    opacity: 0;
+    transform: translateY(-24px);
+    animation: fadeInDown 0.5s ease-out forwards;
+  }
+  .animate-slide-in-left {
+    opacity: 0;
+    transform: translateX(-40px);
+    animation: slideInLeft 0.5s ease-out forwards;
+  }
+  .animate-slide-in-right {
+    opacity: 0;
+    transform: translateX(40px);
+    animation: slideInRight 0.5s ease-out forwards;
+  }
+  .animate-scale-in {
+    opacity: 0;
+    transform: scale(0.9);
+    animation: scaleIn 0.4s ease-out forwards;
+  }
+  
+  /* Initial hidden state before intersection observer triggers */
+  .reveal-hidden {
+    opacity: 0;
+    visibility: hidden;
+  }
+  /* Fallback for when intersection observer isn't running */
+  .no-js .reveal-hidden {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+@keyframes fadeIn {
+  to { opacity: 1; visibility: visible; }
+}
+
+@keyframes fadeInUp {
+  to { opacity: 1; transform: translateY(0); visibility: visible; }
+}
+
+@keyframes fadeInDown {
+  to { opacity: 1; transform: translateY(0); visibility: visible; }
+}
+
+@keyframes slideInLeft {
+  to { opacity: 1; transform: translateX(0); visibility: visible; }
+}
+
+@keyframes slideInRight {
+  to { opacity: 1; transform: translateX(0); visibility: visible; }
+}
+
+@keyframes scaleIn {
+  to { opacity: 1; transform: scale(1); visibility: visible; }
+}
