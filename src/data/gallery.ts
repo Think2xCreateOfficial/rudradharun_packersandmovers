@@ -26,7 +26,7 @@ export interface GalleryImage {
 export const gallerySEO = {
   title: "Gallery | Rudra Dharun Packers and Movers – See Our Work",
   description:
-    "Browse our gallery of professional packing, loading, transport, and relocation projects across Tamil Nadu. 1200+ successful moves documented.",
+    "Browse our gallery of professional packing, loading, transport, and relocation projects across Tamil Nadu. 100+ successful moves documented.",
   keywords: [
     "packers movers gallery Coimbatore",
     "moving photos Tamil Nadu",
@@ -87,10 +87,10 @@ export const galleryImages: GalleryImage[] = [
 
 // ---- Working Process ----
 export const workingProcess = [
-  { id: "wp1", step: "01", title: "Site Inspection", description: "Our team visits your location for a thorough assessment.", image: "/packersandmovers29.png" },
-  { id: "wp2", step: "02", title: "Expert Packing", description: "Multi-layer packing for every item, big or small.", image: "/packersandmovers10.png" },
-  { id: "wp3", step: "03", title: "Safe Loading", description: "Systematic, furniture-safe loading techniques used.", image: "/packersandmovers13.png" },
+  { id: "wp1", step: "01", title: "Site Inspection", description: "Our team visits your location for a thorough assessment.", image: "/packersandmovers2.png" },
+  { id: "wp2", step: "02", title: "Expert Packing", description: "Multi-layer packing for every item, big or small.", image: "/packersandmovers30.png" },
+  { id: "wp3", step: "03", title: "Safe Loading", description: "Systematic, furniture-safe loading techniques used.", image: "/packersandmovers14.png" },
   { id: "wp4", step: "04", title: "GPS Transport", description: "Real-time tracked transit with care and speed.", image: "/gps.jpg" },
-  { id: "wp5", step: "05", title: "Delivery", description: "On-time delivery to your new home or office.", image: "/packersandmovers14.png" },
+  { id: "wp5", step: "05", title: "Delivery", description: "On-time delivery to your new home or office.", image: "/packersandmovers3.png" },
   { id: "wp6", step: "06", title: "Unpacking", description: "We unpack, arrange, and ensure you are settled in.", image: "/packersandmovers28.png" },
 ];

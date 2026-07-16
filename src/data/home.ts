@@ -9,9 +9,9 @@ export const homeHero = {
   whatsappCta: "Chat Now",
   quoteCta: "Get Free Quote",
   stats: [
-    { value: "1200+", label: "Moves Completed" },
+    { value: "100+", label: "Moves Completed" },
     { value: "100%", label: "Damage-Free Guarantee" },
-    { value: "85%", label: "Repeat Customers" },
+    { value: "95%", label: "Repeat Customers" },
   ],
   heroImage: {
     src: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=2000",
@@ -90,7 +90,7 @@ export const whyUsFeatures = [
   { id: "1", title: "Damage-Free Packing", description: "Premium multi-layer packing materials.", icon: "ShieldCheck", color: "blue" },
   { id: "2", title: "Trained Tamil Staff", description: "Professional, courteous local experts.", icon: "Users", color: "navy" },
   { id: "3", title: "Affordable Pricing", description: "Transparent quotes with no hidden fees.", icon: "Banknote", color: "gold" },
-  { id: "4", title: "GPS Tracked Vehicles", description: "Real-time updates on your shipment.", icon: "MapPin", color: "blue" },
+  { id: "4", title: "Regular Updates", description: "Stay informed throughout your move", icon: "MapPin", color: "blue" },
   { id: "5", title: "Doorstep Pickup", description: "Complete end-to-end relocation.", icon: "Home", color: "navy" },
   { id: "6", title: "Secure Warehousing", description: "24/7 CCTV monitored storage.", icon: "Warehouse", color: "gold" },
   { id: "7", title: "On-Time Delivery", description: "Strict adherence to schedules.", icon: "Clock", color: "blue" },

@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     default: "Rudra Dharun Packers and Movers | Reliable Relocation Services in Tamil Nadu",
   },
   description:
-    "Premium and secure packers and movers services in Tamil Nadu for household shifting, office relocation, and vehicle transport. Trusted since 2016.",
+    "Premium and secure packers and movers services in Tamil Nadu for household shifting, office relocation, and vehicle transport. Trusted since 2024.",
   keywords: [
     "Packers and Movers",
     "Tamil Nadu moving company",

@@ -5,9 +5,9 @@ export const homeSEO = {
 };
 
 export const aboutSEO = {
-  title: "About Us | Rudra Dharun Packers and Movers – Trusted Since 2016",
+  title: "About Us | Rudra Dharun Packers and Movers – Trusted Since 2024",
   description:
-    "Learn about Rudra Dharun Packers and Movers — our story, mission, values, and the expert team that has relocated 1200+ families safely across Tamil Nadu.",
+    "Learn about Rudra Dharun Packers and Movers — our story, mission, values, and the expert team that has relocated 100+ families safely across Tamil Nadu.",
   keywords: [
     "about Rudra Dharun Packers Movers",
     "packers movers Coimbatore history",

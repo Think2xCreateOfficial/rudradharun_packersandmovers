@@ -1,6 +1,6 @@
 export const BUSINESS = {
   name: "Rudra Dharun Packers and Movers",
-  phone: "+91 8925310877",
+  phone: "+91 9344717841",
   phoneDisplay: "Contact Us",
   whatsapp: "+91 8925310877",
   email: "rudradhir1@gmail.com",
@@ -25,8 +25,8 @@ export const BUSINESS = {
   },
   trust: {
     yearsOfExperience: "8+",
-    movesCompleted: "1200+",
-    repeatCustomers: "85%",
+    movesCompleted: "100+",
+    repeatCustomers: "95%",
     rating: "5.0",
     reviewCount: "200+",
   },

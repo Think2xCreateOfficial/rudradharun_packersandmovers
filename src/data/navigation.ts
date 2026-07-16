@@ -28,7 +28,7 @@ export const NAV_CTAS: NavCTA[] = [
   },
   {
     label: "Call Now",
-    href: "tel:+919XXXXXXXXX",
+    href: "tel:+9344717841",
     variant: "call",
     icon: "Phone",
   },

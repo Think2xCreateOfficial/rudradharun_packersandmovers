@@ -4,9 +4,9 @@
 
 // ---- SEO ----
 export const aboutSEO = {
-  title: "About Us | Rudra Dharun Packers and Movers – Trusted Since 2016",
+  title: "About Us | Rudra Dharun Packers and Movers – Trusted Since 2024",
   description:
-    "Learn about Rudra Dharun Packers and Movers — our story, mission, values, and the expert team that has relocated 1200+ families safely across Tamil Nadu.",
+    "Learn about Rudra Dharun Packers and Movers — our story, mission, values, and the expert team that has relocated 100+ families safely across Tamil Nadu.",
   keywords: [
     "about Rudra Dharun Packers Movers",
     "packers movers Coimbatore history",
@@ -35,7 +35,7 @@ export const companyStory = {
   eyebrow: "Our Story",
   title: "From One Truck to Tamil Nadu",
   paragraphs: [
-    "Rudra Dharun Packers and Movers was founded in 2016 by our Director, Mr. Karthik, with a single truck and an unwavering commitment to treating every customer's belongings as his own. Operating out of Coimbatore, we began by serving local households and quickly gained a reputation for care, punctuality, and transparent pricing.",
+    "Rudra Dharun Packers and Movers was founded in 2024 by our Director, Mr. Karthik, with a single truck and an unwavering commitment to treating every customer's belongings as his own. Operating out of Coimbatore, we began by serving local households and quickly gained a reputation for care, punctuality, and transparent pricing.",
     "Over the years, we expanded our fleet, trained a professional crew, and built the logistics infrastructure to serve all districts of Tamil Nadu and beyond. Today, we operate GPS-equipped vehicles, a modern packing facility, and a dedicated customer-support team — all driven by the same values we started with.",
   ],
   mission:
@@ -55,7 +55,7 @@ export const companyStory = {
 
 // ---- Stats ----
 export const aboutStats = [
-  { id: "s1", value: 500, suffix: "+", label: "Happy Customers" },
+  { id: "s1", value: 100, suffix: "+", label: "Happy Customers" },
   { id: "s2", value: 15, suffix: "+", label: "Cities Covered" },
   { id: "s3", value: 12, suffix: "+", label: "Dedicated Team" },
   { id: "s4", value: 100, suffix: "%", label: "Reliable Service" },
@@ -63,16 +63,16 @@ export const aboutStats = [
 
 // ---- Service Areas ----
 export const serviceAreas = [
-  { id: "sa1",  name: "Coimbatore",  icon: "MapPin", isHQ: true },
-  { id: "sa2",  name: "Chennai",     icon: "MapPin" },
-  { id: "sa3",  name: "Madurai",     icon: "MapPin" },
-  { id: "sa4",  name: "Salem",       icon: "MapPin" },
-  { id: "sa5",  name: "Erode",       icon: "MapPin" },
-  { id: "sa6",  name: "Tiruppur",    icon: "MapPin" },
-  { id: "sa7",  name: "Trichy",      icon: "MapPin" },
-  { id: "sa8",  name: "Bangalore",   icon: "MapPin" },
-  { id: "sa9",  name: "Hyderabad",   icon: "MapPin" },
-  { id: "sa10", name: "Kerala",      icon: "MapPin" },
+  { id: "sa1", name: "Coimbatore", icon: "MapPin", isHQ: true },
+  { id: "sa2", name: "Chennai", icon: "MapPin" },
+  { id: "sa3", name: "Madurai", icon: "MapPin" },
+  { id: "sa4", name: "Salem", icon: "MapPin" },
+  { id: "sa5", name: "Erode", icon: "MapPin" },
+  { id: "sa6", name: "Tiruppur", icon: "MapPin" },
+  { id: "sa7", name: "Trichy", icon: "MapPin" },
+  { id: "sa8", name: "Bangalore", icon: "MapPin" },
+  { id: "sa9", name: "Hyderabad", icon: "MapPin" },
+  { id: "sa10", name: "Kerala", icon: "MapPin" },
 ];
 
 // ---- Team ----

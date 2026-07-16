@@ -94,7 +94,7 @@ export function Footer() {
               </Link>
 
               <p className="text-sm text-blue-200 leading-relaxed max-w-xs">
-                Professional relocation services across Tamil Nadu. Trusted by 500+ families and Customers.
+                Professional relocation services across Tamil Nadu. Trusted by 100+ families and Customers.
               </p>
 
               {/* Trust badges */}
