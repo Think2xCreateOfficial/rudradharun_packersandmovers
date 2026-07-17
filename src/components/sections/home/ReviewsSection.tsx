@@ -180,9 +180,6 @@ function ReviewModal({ review, avatarBg, initials, onClose }: ModalProps) {
               </div>
             </div>
           </div>
-          {review.date && (
-            <p className="text-xs text-gray-500 sm:text-right font-medium">{review.date}</p>
-          )}
         </div>
       </div>
     </div>,
@@ -272,8 +269,8 @@ function TestimonialCard({ review }: { review: typeof REVIEWS[number] }) {
         </div>
 
         {/* ── Zone 3: Footer ── */}
-        <div className="mt-4 shrink-0 pt-5 z-10">
-          <div className="flex items-center gap-4">
+        <div className="mt-4 shrink-0 pt-5 z-10 flex items-center h-[72px]">
+          <div className="flex items-center gap-4 w-full">
             {/* Avatar */}
             <div
               className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full text-xs font-bold text-white shadow-lg border border-white/20 transition-transform duration-300 group-hover:scale-105"
@@ -291,17 +288,9 @@ function TestimonialCard({ review }: { review: typeof REVIEWS[number] }) {
                 <span className="text-[11px] font-semibold text-brand-blue uppercase tracking-wider">
                   {review.serviceUsed}
                 </span>
-                <span className="text-white/30 text-[10px]">•</span>
-                <span className="text-[11px] text-gray-400 font-medium">
-                  {review.location}
-                </span>
               </div>
             </div>
           </div>
-
-          {review.date && (
-            <p className="mt-4 text-[11px] font-medium text-gray-500/80">{review.date}</p>
-          )}
         </div>
       </div>
 
